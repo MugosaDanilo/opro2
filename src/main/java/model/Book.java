@@ -5,12 +5,19 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "book_seq")
     private Long id;
     private String title;
     private String isbn;
 
-    private List<Author> authors = new ArrayList<>();
+   // private List<Author> authors = new ArrayList<>();
+
+    public Book() {
+
+    }
 
     public Book(Long id, String title, String isbn) {
         this.id = id;
@@ -42,11 +49,11 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public List<Author> getAuthors() {
+   /* public List<Author> getAuthors() {
         return authors;
     }
 
     public void setAuthors(List<Author> authors) {
         this.authors = authors;
-    }
+    }*/
 }

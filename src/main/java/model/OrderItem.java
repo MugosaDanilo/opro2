@@ -8,7 +8,6 @@ public class OrderItem {
     private Book book;
     private Integer quantity;
 
-
     public OrderItem(Long id, Order order, Book book, Integer quantity) {
         this.id = id;
         this.order = order;

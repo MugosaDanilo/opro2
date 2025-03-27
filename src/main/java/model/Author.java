@@ -13,10 +13,9 @@ public class Author {
 
     public Author() {}
 
-    public Author(Long id, String name, List<Book> books) {
+    public Author(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.books = books;
     }
 
     public Long getId() {
